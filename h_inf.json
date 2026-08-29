@@ -1,0 +1,14 @@
+{
+  "name": "haemophilus influenzae",
+  "hinf_cef_pos":"Beta-lactamase detected",
+  "hinf_cef_neg":"Beta-lactamase not detected",
+  "hinf_no_mechanism_detected":"TEST",
+  "hinf_mechanism_detected":"TEST",
+  "hinf_furthur_testing":"Test for Beta- lactamase", 
+  "hinf_beta_lactam_pos": "Mechanism: beta-lacamase with or without PBP3 mutations",
+  "hinf_beta_lactam_neg": "Mechanism: PBP3 mutations",
+  "hinf_Aug_ge_15":"Mechanism: beta-lactamase only",
+  "hinf_Aug_lt_15":"Mechanism: beta-lactamase and PBP3 mutations"
+}
+
+

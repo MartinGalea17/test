@@ -1,0 +1,145 @@
+{
+    "organism": "Stenotrophomonas maltophilia",
+    "Version": "CLSI M100 ED36:2026",
+    "clinical_group": "Stenotrophomonas",
+    "breakpoints": [
+        {
+            "class": "Penicillins",
+            "antibiotic": "Ticarcillin-clavulanate",
+            "sample_type": "",
+            "administration": "",
+            "name": "",
+            "group": "",
+            "exclude_name": "",
+            "exclude_group": "",
+            "MIC": {
+                "S": "≤16/2",
+                "R": "≥128/2",
+                "ATU": "32/2-64/2"
+            },
+            "disk": {
+                "content_ug": "",
+                "zone_mm": {
+                    "S": "",
+                    "R": "",
+                    "ATU": ""
+                }
+            }
+        },
+        {
+            "class": "Cephalosporins",
+            "antibiotic": "Cefiderocol",
+            "sample_type": "",
+            "administration": "",
+            "name": "",
+            "group": "",
+            "exclude_name": "",
+            "exclude_group": "",
+            "MIC": {
+                "S": "≤1",
+                "R": "",
+                "ATU": ""
+            },
+            "disk": {
+                "content_ug": "30",
+                "zone_mm": {
+                    "S": "≥17",
+                    "R": "",
+                    "ATU": ""
+                }
+            }
+        },
+        {
+            "class": "Tetracyclines",
+            "antibiotic": "Minocycline",
+            "sample_type": "",
+            "administration": "",
+            "name": "",
+            "group": "",
+            "exclude_name": "",
+            "exclude_group": "",
+            "MIC": {
+                "S": "≤1",
+                "R": "≥4",
+                "ATU": "2"
+            },
+            "disk": {
+                "content_ug": "30",
+                "zone_mm": {
+                    "S": "≥26",
+                    "R": "≤20",
+                    "ATU": "21-25"
+                }
+            }
+        },
+        {
+            "class": "Fluoroquinolones",
+            "antibiotic": "Levofloxacin",
+            "sample_type": "",
+            "administration": "",
+            "name": "",
+            "group": "",
+            "exclude_name": "",
+            "exclude_group": "",
+            "MIC": {
+                "S": "≤2",
+                "R": "≥8",
+                "ATU": "4"
+            },
+            "disk": {
+                "content_ug": "5",
+                "zone_mm": {
+                    "S": "≥17",
+                    "R": "≤13",
+                    "ATU": "14-16"
+                }
+            }
+        },
+        {
+            "class": "Miscellaneous agents",
+            "antibiotic": "Trimethoprim-sulfamethoxazole",
+            "sample_type": "",
+            "administration": "",
+            "name": "",
+            "group": "",
+            "exclude_name": "",
+            "exclude_group": "",
+            "MIC": {
+                "S": "≤2/38",
+                "R": "≥4/76",
+                "ATU": ""
+            },
+            "disk": {
+                "content_ug": "1.25/23.75",
+                "zone_mm": {
+                    "S": "≥16",
+                    "R": "≤10",
+                    "ATU": "11-15"
+                }
+            }
+        },
+        {
+            "class": "Miscellaneous agents",
+            "antibiotic": "Chloramphenicol",
+            "sample_type": "",
+            "administration": "",
+            "name": "",
+            "group": "",
+            "exclude_name": "",
+            "exclude_group": "",
+            "MIC": {
+                "S": "≤8",
+                "R": "≥32",
+                "ATU": "16"
+            },
+            "disk": {
+                "content_ug": "",
+                "zone_mm": {
+                    "S": "",
+                    "R": "",
+                    "ATU": ""
+                }
+            }
+        }
+    ]
+}

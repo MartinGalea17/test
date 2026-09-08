@@ -1,0 +1,99 @@
+{
+    "organism": "Micrococcus spp.",
+    "Version": "CLSI M45 ED3_2016",
+    "clinical_group": "Micrococcus",
+    "breakpoints": [
+        {
+            "class": "Penicillins",
+            "antibiotic": "Penicillin",
+            "sample_type": "",
+            "administration": "",
+            "name": "",
+            "group": "",
+            "exclude_name": "",
+            "exclude_group": "",
+            "MIC": {
+                "S": "≤0.12",
+                "R": "≥0.25",
+                "ATU": ""
+            },
+            "disk": {
+                "content_ug": "",
+                "zone_mm": {
+                    "S": "",
+                    "R": "",
+                    "ATU": ""
+                }
+            }
+        },
+        {
+            "class": "Glycopeptides and lipoglycopeptides",
+            "antibiotic": "Vancomycin",
+            "sample_type": "",
+            "administration": "",
+            "name": "",
+            "group": "",
+            "exclude_name": "",
+            "exclude_group": "",
+            "MIC": {
+                "S": "≤2",
+                "R": "",
+                "ATU": ""
+            },
+            "disk": {
+                "content_ug": "",
+                "zone_mm": {
+                    "S": "",
+                    "R": "",
+                    "ATU": ""
+                }
+            }
+        },
+        {
+            "class": "Macrolides, lincosamides and streptogramins",
+            "antibiotic": "Erythromycin",
+            "sample_type": "",
+            "administration": "",
+            "name": "",
+            "group": "",
+            "exclude_name": "",
+            "exclude_group": "",
+            "MIC": {
+                "S": "≤0.5",
+                "R": "≥8",
+                "ATU": "1–4"
+            },
+            "disk": {
+                "content_ug": "",
+                "zone_mm": {
+                    "S": "",
+                    "R": "",
+                    "ATU": ""
+                }
+            }
+        },
+        {
+            "class": "Macrolides, lincosamides and streptogramins",
+            "antibiotic": "Clindamycin",
+            "sample_type": "",
+            "administration": "",
+            "name": "",
+            "group": "",
+            "exclude_name": "",
+            "exclude_group": "",
+            "MIC": {
+                "S": "≤0.5",
+                "R": "≥4",
+                "ATU": "1–2"
+            },
+            "disk": {
+                "content_ug": "",
+                "zone_mm": {
+                    "S": "",
+                    "R": "",
+                    "ATU": ""
+                }
+            }
+        }
+    ]
+}

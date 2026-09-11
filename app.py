@@ -9,11 +9,13 @@ from new_preset_repo import load_preset_repository
 from eucast_repo import EucastRepository
 from save_delete_dialogs import confirm_data_change
 from Ast_engine import ASTEngine
+from organism_resistance_repo import load_organism_resistance_repo
 
 
 
 preset_repo = load_preset_repository()
 site_options = preset_repo.get_sites()
+organism_resistance = load_organism_resistance_repo() 
 
 
 
@@ -131,6 +133,8 @@ def show_app():
                                     with message_col:
                                         st.info("Data was not changed")
                 with tab2:
+                    st.subheader("Intrinsitc and base mechanism tables")
+                    st.selectbox
                     pass
             with tab2:
                 st.write("Rules tab")  

@@ -1,4 +1,5 @@
 import sqlite3
+import streamlit as st 
 
 class OrganismResistanceRepo:
     def __init__(self, db_path="organism_resistance.db"):
@@ -126,6 +127,12 @@ class OrganismResistanceRepo:
            "baseline_mechanisms": [dict(row) for row in mechanisms]
        }
 
+
+
+
+@st.cache_Resource
+def load_organism_resistance_repo():
+    return OrganismResistanceRepo()
 
 """
 repo = OrganismResistanceRepo()

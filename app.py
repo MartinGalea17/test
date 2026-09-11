@@ -9,7 +9,7 @@ from new_preset_repo import load_preset_repository
 from eucast_repo import EucastRepository
 from save_delete_dialogs import confirm_data_change
 from Ast_engine import ASTEngine
-from organism_resistance_repo import load_organism_resistance_repo
+
 
 
 

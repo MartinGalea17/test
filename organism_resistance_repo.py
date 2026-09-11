@@ -130,7 +130,7 @@ class OrganismResistanceRepo:
 
 
 
-@st.cache_Resource
+@st.cache_resource
 def load_organism_resistance_repo():
     return OrganismResistanceRepo()
 

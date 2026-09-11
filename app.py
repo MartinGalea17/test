@@ -15,7 +15,7 @@ from Ast_engine import ASTEngine
 
 preset_repo = load_preset_repository()
 site_options = preset_repo.get_sites()
-organism_resistance = load_organism_resistance_repo() 
+
 
 
 

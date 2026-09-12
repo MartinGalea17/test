@@ -367,7 +367,7 @@ def show_app():
 
                                 st.markdown(f"""
                                     **Antibiotic:** {antibiotic}  
-                                    **Final interpretation:** : {flag} :{color}[{result_data['interpretation']}]            
+                                    **Final interpretation** : {flag} :{color}[{result_data['interpretation']}]            
                                     """)
                                 with st.expander("View results details"):
                                     st.subheader("**Breakpoint details:**")

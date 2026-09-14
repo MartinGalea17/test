@@ -5,17 +5,20 @@ import pandas as pd
 from streamlit_lottie import st_lottie
 
 from Hinfst_dialogs import check_heamophilus
+from add_edit_intrinsic_dialog import add_edit_intrinsic
+from add_edit_phenotypes_dialog import add_edit_phenotpes
+from add_edit_basemech_dialog  import add_edit_base_mechanisms
 from new_preset_repo import load_preset_repository
 from eucast_repo import EucastRepository
 from save_delete_dialogs import confirm_data_change
 from Ast_engine import ASTEngine
-
+from organism_resistance_repo import load_reistance_repository
 
 
 
 preset_repo = load_preset_repository()
 site_options = preset_repo.get_sites()
-
+resistance_repo = load_reistance_repository()
 
 
 
@@ -27,7 +30,7 @@ def load_lottie_file(filepath):
 bacterium_animation = load_lottie_file("Bacteriumsinglecellorganism.json")
 paper_animation = load_lottie_file("Document Icon Lottie Animation.json")
 save_animation = load_lottie_file("approve.json")
-info_status = load_lottie_file("Info_status.json")
+info_status = load_lottie_file("info_status.json")
 search_results = load_lottie_file("Search.json")
 
 
@@ -81,7 +84,7 @@ def show_app():
             with tab1:
                 st.title("This is the Notifications tab.")
             with tab2:
-                st.subheader("Settings tab.")
+                st.header("⚙️ Settings tab.")
                 tab1, tab2, tab3 = st.tabs(["🗂️ Presets", "📖 Organism/resistance mechanisms", "📝 Logs"])
                 with tab1:
                     presets_container = st.container(border=True)
@@ -112,6 +115,7 @@ def show_app():
                         
                         with save_col:
                             with st.container(horizontal_alignment="center"):
+                                st.warning("Do not save yet!!👀")
                                 if st.button("💾 Save changes",width="content"):
                                     st.session_state.confirm_result = None
                                     confirm_data_change(selected_preset_id, preset_df,edited_df,antibiotic_df,edited_ab_df)
@@ -133,12 +137,51 @@ def show_app():
                                     with message_col:
                                         st.info("Data was not changed")
                 with tab2:
-                    st.subheader("Intrinsitc and base mechanism tables")
-                    st.selectbox
-                    pass
-            with tab2:
-                st.write("Rules tab")  
-                
+                    st.subheader("📖 Rules editing tab")
+                    rule_type = ["Intrinsic resistance","Resistance groups","Phenotypes"]
+                    selected_rule_type = st.selectbox("Select rule type:",rule_type)
+
+                    if selected_rule_type == "Intrinsic resistance":
+                        st.subheader("Intrinsic resistance rules")
+                        st.divider()
+                        organisms = resistance_repo.get_all_organisms()
+                        organism_names = [row["organism"] for row in organisms]
+                        selected_organism = st.selectbox("Select organism:", organism_names)
+                       
+                        intrinsic_resistance = resistance_repo.get_intrinsic_resistance(selected_organism)
+                        intrinsic_df = pd.DataFrame([dict(row) for row in intrinsic_resistance])
+                        intrinsic_editor_df = st.data_editor(intrinsic_df, use_container_width=True,hide_index=True,num_rows="fixed")
+
+                        
+                        if st.button("➕ Add / Edit"):
+                            add_edit_intrinsic()
+                       
+                        
+                    if selected_rule_type == "Resistance groups":
+                        st.subheader("Base line mechanism rules")
+                        st.divider()
+                        organisms = resistance_repo.get_all_organisms()
+                        organism_names = [row["organism"] for row in organisms]
+                        selected_organism = st.selectbox("Select organism:", organism_names)
+                        baseline_mechanisms = resistance_repo.get_baseline_mechanisms(selected_organism)
+                        baseline_mechanism_df = pd.DataFrame([dict(row) for row in baseline_mechanisms])
+                        edited_baseline_mechanism_df = st.data_editor(baseline_mechanism_df, use_container_width=True, hide_index=True,num_rows="fixed")
+
+                        if st.button("➕ Add / Edit"):
+                            add_edit_base_mechanisms()
+
+
+                    if selected_rule_type == "Phenotypes":
+                        st.subheader("Expected pheonotype rules")
+                        st.divider()
+                        organisms = resistance_repo.get_all_organisms()
+                        organism_names = [row["organism"] for row in organisms]
+                        selected_organism = st.selectbox("Select organism:", organism_names)
+
+                        if st.button("➕ Add / Edit"):
+                            add_edit_phenotpes()
+
+
                      
             with tab3:
                 st.write("This is the logs tab.")
@@ -367,7 +410,7 @@ def show_app():
 
                                 st.markdown(f"""
                                     **Antibiotic:** {antibiotic}  
-                                    **Final interpretation** : {flag} :{color}[{result_data['interpretation']}]            
+                                    **Final interpretation:** : {flag} :{color}[{result_data['interpretation']}]            
                                     """)
                                 with st.expander("View results details"):
                                     st.subheader("**Breakpoint details:**")
@@ -400,15 +443,6 @@ def show_app():
                 name_input = st.text_input("Enter organism name:").strip().lower()
                 if "haemophilus" in name_input:
                     check_heamophilus()
-
-
-               
-
-
-           
-            
-        
-
 
 
 show_app()

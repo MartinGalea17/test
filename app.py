@@ -30,7 +30,7 @@ def load_lottie_file(filepath):
 bacterium_animation = load_lottie_file("Bacteriumsinglecellorganism.json")
 paper_animation = load_lottie_file("Document Icon Lottie Animation.json")
 save_animation = load_lottie_file("approve.json")
-info_status = load_lottie_file("info_status.json")
+info_status = load_lottie_file("Info_status.json")
 search_results = load_lottie_file("Search.json")
 
 

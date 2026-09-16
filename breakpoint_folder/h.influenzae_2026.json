@@ -1,6 +1,6 @@
 {
+    "eucast_version": "2026",
     "organism": "Haemophilus influenzae",
-    "Version": "2026",
     "clinical_group": "Haemophilus",
     "breakpoints": [
         {

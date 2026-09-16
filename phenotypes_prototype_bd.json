@@ -1,0 +1,36 @@
+{
+  "organism": "Haemophilus influenzae",
+  "phenotype_validation": {
+    "CRO": {
+      "expected": ["S", "I"],
+      "flag_if": ["R"]
+    },
+    "CIP": {
+      "expected": ["S", "I"],
+      "flag_if": ["R"]
+    }
+  }
+}
+
+
+
+
+
+{
+  "organism": "staphylococcus aureus",
+  "rules": [
+    {
+      "id": "HI-001",
+      "if": {
+        "PIP_TAZ": "S"
+      },
+      "then": {
+        "must_not_be": {
+          "AMP": "R",
+          "AMC": "R"
+        }
+      },
+      "action": "FLAG"
+    }
+  ]
+}

@@ -30,7 +30,7 @@ def load_lottie_file(filepath):
 bacterium_animation = load_lottie_file("Bacteriumsinglecellorganism.json")
 paper_animation = load_lottie_file("Document Icon Lottie Animation.json")
 save_animation = load_lottie_file("approve.json")
-info_status = load_lottie_file("Info_status.json")
+info_status = load_lottie_file("info_status.json")
 search_results = load_lottie_file("Search.json")
 
 
@@ -315,13 +315,40 @@ def show_app():
                     with col4:
                         eucast_date = st.selectbox("Select eucast date:",options=date_options, index=0,key="eucast_data")
 
+                     # Initialise applied filters on first run
+                    if "selected_site" not in st.session_state:
+                        st.session_state["selected_site"] = filter_by_sterility
+
+                    if "selected_sample_type" not in st.session_state:
+                        st.session_state["selected_sample_type"] = sample_type
+
+                    if "selected_administration" not in st.session_state:
+                        st.session_state["selected_administration"] = administration_type
+
+                    if "selected_eucast_date" not in st.session_state:
+                        st.session_state["selected_eucast_date"] = eucast_date
+
                     confirm_filters = st.button("Apply filters")
-                    #confirm filters logic
+
                     if confirm_filters:
                         st.session_state["selected_site"] = filter_by_sterility
                         st.session_state["selected_sample_type"] = sample_type
                         st.session_state["selected_administration"] = administration_type
                         st.session_state["selected_eucast_date"] = eucast_date
+
+                        # Clear results from the previous filter selection
+                        st.session_state["interpreted_results"] = None
+
+                        # Clear extra antibiotics from the previous EUCAST version
+                        st.session_state["extra_antibiotics"] = [] 
+
+                        st.success("Filters applied")
+
+                selected_site = st.session_state["selected_site"]
+                selected_sample_type = st.session_state["selected_sample_type"]
+                selected_administration = st.session_state["selected_administration"]
+                selected_eucast_date = st.session_state["selected_eucast_date"] 
+                st.write("Applied filters:",selected_site,selected_sample_type,selected_administration,selected_eucast_date)
 
 
                 
@@ -342,14 +369,13 @@ def show_app():
 
                         antibiotic_input_container = st.container(border=True)
                         with antibiotic_input_container:
-                            if "haemophilus" in organism_input and "selected_site" in st.session_state["filter_by_sterility"]:
-                                check_heamophilus()
-                                if "haemophilus" not in organism_input and "selected_site" in st.session_state["filter_by_sterility"]:
-                                    return None
-                            else:
-                                organism_input and "selected_site" in st.session_state["filter_by_sterility"]
+                            if organism_input:
+
+                                #h.influenzae workflow
+                                if "haemophilus" in organism_input:
+                                    check_heamophilus()
                                 
-                                extra_antibiotic_options = engine.get_available_antibiotics(organism_input)
+                                extra_antibiotic_options = engine.get_available_antibiotics(organism_input, selected_eucast_date)
                                 extra_antibiotics = st.multiselect("Select extra antibiotics:",options=extra_antibiotic_options,format_func=lambda item: f"{item['antibiotic']} - {item['method']}",help="Showing antibiotics asocciated with the selected organism only. Not all antibiotics have breakpoints available")
                                 add_additional_antibiotics = st.button("➕ Add antibioticcs")
 
@@ -373,7 +399,7 @@ def show_app():
                                             #passing results to the engine
                                            
                                     if st.button("Submit results:", key="submit ast result"):
-                                        interpreted_results = engine.build_results(organism= organism_input,results=user_ast_results)
+                                        interpreted_results = engine.build_results(organism= organism_input,results=user_ast_results,eucast_date=selected_eucast_date)
                                         print("Build Results returend:", interpreted_results)
                                         st.session_state["interpreted_results"] = interpreted_results
                                         
@@ -393,7 +419,7 @@ def show_app():
                                 st.title("Results:")
                                
                         interpreted_results = st.session_state.get("interpreted_results")
-                        interpretation_colors = {"S": "green", "I": "yellow", "R": "red", "No breakpoint": "gray"}
+                        interpretation_colors = {"➤ Sensitive": "green", "➤ Intermediate": "yellow", "➤ Resistant": "red", "No breakpoint": "gray"}
                         
                         
                         if interpreted_results is not None:
@@ -410,7 +436,7 @@ def show_app():
 
                                 st.markdown(f"""
                                     **Antibiotic:** {antibiotic}  
-                                    **Final interpretation:** : {flag} :{color}[{result_data['interpretation']}]            
+                                    **Final interpretation:** {flag} :{color}[{result_data['interpretation']}]            
                                     """)
                                 with st.expander("View results details"):
                                     st.subheader("**Breakpoint details:**")

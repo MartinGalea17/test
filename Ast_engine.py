@@ -20,8 +20,18 @@ class ASTEngine:
 
     def load_data(self):
         #loading the repos data, presets was not laoded as its an sqllite data base
-        self.bacteria.load_bacteria()
-        self.eucast.load_breakpoints()
+        with st.status("Loading AST data...", expanded=True) as status:
+
+            st.write("Loading bacteria database...")
+            self.bacteria.load_bacteria()
+
+            st.write("Loading EUCAST breakpoints...")
+            self.eucast.load_breakpoints()
+
+            status.update(
+            label="AST data loaded",
+            state="complete",
+            expanded=False)
 
     def build_panel(self, organism, site, extra_antibiotics=None):
         #getting the species and group from the bacteria repo
@@ -301,12 +311,6 @@ class ASTEngine:
       
 
 engine = ASTEngine()
-if engine:
-    progress_text = "Operation in progress. Please wait."
-    my_bar = st.progress(0, text=progress_text)
 
-for percent_complete in range(100):
-    time.sleep(0.01)
-    my_bar.progress(percent_complete + 1, text=progress_text)
-time.sleep(1)
-my_bar.empty()
+print(hasattr(engine, "get_breakpoint_date"))
+

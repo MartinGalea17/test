@@ -29,6 +29,7 @@ class ASTEngine:
 
         species = bacteria["species"]
         clinical_group = bacteria["clinical_group"]
+         
 
         print("SPECIES:", repr(species))
         print("CLINICAL GROUP:", repr(clinical_group))
@@ -74,12 +75,12 @@ class ASTEngine:
         "preset": [dict(row) for row in preset]}
        
 
-    def build_results(self,organism,results):
+    def build_results(self,organism,results,eucast_date=None):
        """ For each antibiotic in results: find its relevant breakpoint check whether method is MIC or Disc
           compare entered value with breakpoint assign S / I / R store final interpretation"""
 
 
-       matched_breakpoints = self.get_relevant_breakoints(organism) # GETTING THE RELEVANT BREAKPOINTS FOR THE ORGANISM
+       matched_breakpoints = self.get_relevant_breakpoints(organism,eucast_date) # GETTING THE RELEVANT BREAKPOINTS FOR THE ORGANISM
        if matched_breakpoints is None:
            return None  # No matching breakpoints found
        final_results = {}
@@ -111,6 +112,22 @@ class ASTEngine:
        final_results = self.rules_engine.apply_intrinsic_resistance(organism, final_results)
        return final_results
 
+    def get_breakpoint_date(self, entries, eucast_date):
+        if eucast_date is None:
+            return entries
+
+        eucast_date = str(eucast_date).strip()
+
+        filtered_entries = [] 
+
+        for entry in entries:
+            entry_date = entry.get("eucast_version")
+
+            if str(entry_date).strip() == eucast_date:
+                filtered_entries.append(entry)
+
+        return filtered_entries
+
     def interpret_results(self, value, selected_breakpoint):
         susceptible = selected_breakpoint.get("S")
         resistant = selected_breakpoint.get("R")
@@ -124,22 +141,32 @@ class ASTEngine:
             "<": operator.lt,
             ">": operator.gt
         }
-        for interpretation, parsed in [("S", s_parsed), ("R", r_parsed)]:
-            if parsed is None:
-                continue  # Skip if parsing failed
-            
 
-            bp_operator, bp_number = parsed
-            comparison = comparison_operators[bp_operator]
+        try:
+            value = float(value)
+        except (TypeError, ValueError):
+            return "Invalid result"
 
-            if comparison(value, bp_number):
-                return interpretation 
+        #susceptible
+        if s_parsed is not None:
+            bp_operator, bp_number = s_parsed
 
-        print("Value", value)
-        print("S", susceptible)
-        print("R", resistant)
-        print("Parsed S", s_parsed)
-        print("Parsed R", r_parsed)
+            if comparison_operators[bp_operator](value,bp_number):
+                return "➤ Sensitive"
+
+        #resistant
+        if r_parsed is not None:
+            bp_operator, bp_number = r_parsed
+        
+            if comparison_operators[bp_operator](value,bp_number):
+                return "➤ Resistant"
+
+        #intermediate
+        if s_parsed is not None and r_parsed is not None:
+            return "➤ Intermediate"
+
+        return "No Breakpoint"
+
 
     def parse_breakpoints(self,breakpoint_value):
         if breakpoint_value is None:
@@ -155,8 +182,8 @@ class ASTEngine:
                 return operator, number
                 
 
-    def get_available_antibiotics(self,organism): #function to get the available antibiotics for a given organism based on the eucast breakpoints for the extra antibiotics part in the app 
-        matched_breakpoints = self.get_relevant_breakoints(organism) #Getting the relevant breakpoints for the organism
+    def get_available_antibiotics(self,organism,eucast_date=None): #function to get the available antibiotics for a given organism based on the eucast breakpoints for the extra antibiotics part in the app 
+        matched_breakpoints = self.get_relevant_breakpoints(organism,eucast_date) #Getting the relevant breakpoints for the organism
         
 
         available_antibiotics = [] 
@@ -175,12 +202,11 @@ class ASTEngine:
             if disk.get("S") not in ["", "-"] or disk.get("R") not in ["", "-"]:
                 available_antibiotics.append({"antibiotic": antibiotic, "method": "disc"})
 
-        return sorted(available_antibiotics,  key=lambda item:(item["antibiotic"], item["method"]))
+        return sorted(available_antibiotics,key=lambda item:(item["antibiotic"], item["method"]))
              
                
-            
+    def get_relevant_breakpoints(self, organism, eucast_date=None):
 
-    def get_relevant_breakoints(self, organism):
         bacteria = self.bacteria.find_bacterium(organism)
 
         if bacteria is None:
@@ -189,10 +215,13 @@ class ASTEngine:
         species = bacteria["species"].strip().lower()
         clinical_group = bacteria["clinical_group"].strip().lower()
 
+        # Only new part: filter entries by EUCAST date first
+        entries = self.get_breakpoint_date(self.eucast.breakpoint_data,eucast_date)
+
         matched_breakpoints = None
 
-        # First: find the correct EUCAST organism/group section
-        for entry in self.eucast.breakpoint_data:
+        # Keep your original matching logic
+        for entry in entries:
             eucast_organism = entry.get("organism")
             eucast_clinical_group = entry.get("clinical_group")
 
@@ -215,9 +244,13 @@ class ASTEngine:
                 if matched_breakpoints is not None:
                     break
 
+        # keep the rest of your existing breakpoint filtering here
+
+        # if nothing matches
         if matched_breakpoints is None:
             return []
 
+        #filter individual breakpoint records 
         relevant_breakpoints = []
 
         for breakpoint in matched_breakpoints:
@@ -259,8 +292,12 @@ class ASTEngine:
                     continue
 
             relevant_breakpoints.append(breakpoint)
+
         return relevant_breakpoints
 
     
       
 
+engine = ASTEngine()
+
+print(hasattr(engine, "get_breakpoint_date"))

@@ -5,6 +5,8 @@ from eucast_repo import EucastRepository
 from organism_resistance_repo import OrganismResistanceRepo
 from rules_engine import RulesEngine
 import operator
+import time 
+import streamlit as st
 
 class ASTEngine:
     def __init__(self):
@@ -299,5 +301,12 @@ class ASTEngine:
       
 
 engine = ASTEngine()
+if engine:
+    progress_text = "Operation in progress. Please wait."
+    my_bar = st.progress(0, text=progress_text)
 
-print(hasattr(engine, "get_breakpoint_date"))
+for percent_complete in range(100):
+    time.sleep(0.01)
+    my_bar.progress(percent_complete + 1, text=progress_text)
+time.sleep(1)
+my_bar.empty()

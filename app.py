@@ -415,7 +415,7 @@ def show_app():
                                             #passing results to the engine
                                            
                                         if st.button("Submit results:", key="submit ast result"):
-                                            interpreted_results = engine.build_results(organism= organism_input,results=user_ast_results,eucast_date=selected_eucast_date)
+                                            interpreted_results = engine.build_results(organism= resolved_organism,results=user_ast_results,eucast_date=selected_eucast_date)
                                             print("Build Results returend:", interpreted_results)
                                             st.session_state["interpreted_results"] = interpreted_results
                                         

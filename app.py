@@ -16,6 +16,7 @@ from organism_resistance_repo import load_reistance_repository
 
 
 
+
 preset_repo = load_preset_repository()
 site_options = preset_repo.get_sites()
 resistance_repo = load_reistance_repository()
@@ -370,38 +371,53 @@ def show_app():
                         antibiotic_input_container = st.container(border=True)
                         with antibiotic_input_container:
                             if organism_input:
+                                resolved_organism = organism_input
+                                #checking exact match
+                                bacterium = engine.bacteria.find_bacterium(organism_input)
 
-                                #h.influenzae workflow
-                                if "haemophilus" in organism_input:
-                                    check_heamophilus()
+                                #if not exact match
+                                if bacterium is None:
+                                    close_matches = engine.bacteria.get_close_match(organism_input)
+                                    if close_matches:
+                                        selected_match = st.selectbox("Organism not found. Did you mean: ",options=close_matches)
+                                        resolved_organism=selected_match
+                                    else:
+                                        st.warning("No matching organism found. Please check your spelling")
+                                        resolved_organism = None
+
+                                if resolved_organism:
+                                    #h.influenzae workflow
+                                    if "haemophilus" in resolved_organism:
+                                        check_heamophilus()
+
                                 
-                                extra_antibiotic_options = engine.get_available_antibiotics(organism_input, selected_eucast_date)
-                                extra_antibiotics = st.multiselect("Select extra antibiotics:",options=extra_antibiotic_options,format_func=lambda item: f"{item['antibiotic']} - {item['method']}",help="Showing antibiotics asocciated with the selected organism only. Not all antibiotics have breakpoints available")
-                                add_additional_antibiotics = st.button("➕ Add antibioticcs")
+                                    extra_antibiotic_options = engine.get_available_antibiotics(resolved_organism, selected_eucast_date)
+                                    extra_antibiotics = st.multiselect("Select extra antibiotics:",options=extra_antibiotic_options,format_func=lambda item: f"{item['antibiotic']} - {item['method']}",help="Showing antibiotics asocciated with the selected organism only. Not all antibiotics have breakpoints available")
+                                    add_additional_antibiotics = st.button("➕ Add antibioticcs")
 
-                                if add_additional_antibiotics:
-                                    st.session_state["extra_antibiotics"] = extra_antibiotics
+                                    if add_additional_antibiotics:
+                                        st.session_state["extra_antibiotics"] = extra_antibiotics
 
-                                result = engine.build_panel(organism=organism_input, site=st.session_state["filter_by_sterility"],extra_antibiotics=st.session_state.get("extra_antibiotics", []))
+                                    result = engine.build_panel(organism=resolved_organism, site=st.session_state["filter_by_sterility"],extra_antibiotics=st.session_state.get("extra_antibiotics", []))
                     
-                                if result and result["preset_found"]:
-                                    st.write("Antibiotics:")
-                                    user_ast_results = {}
-                                    for antibiotic in result["antibiotics"]:
-                                        input_key =( f"ast_result_"
+                                    if result and result["preset_found"]:
+                                        st.write("Antibiotics:")
+                                        user_ast_results = {}
+                                        for antibiotic in result["antibiotics"]:
+                                            input_key =( f"ast_result_"
                                                     f"{antibiotic['antibiotic'].strip().lower()}_"
                                                     f"{antibiotic['method'].strip().lower()}")
                                         
-                                        value = st.number_input(f"{antibiotic['antibiotic']} - {antibiotic['method']}", value=None,key=input_key)
-                                        #read the ast result
-                                        if value is not None:
-                                            user_ast_results[antibiotic['antibiotic']] = {"value": value, "method": antibiotic['method']}
+                                            value = st.number_input(f"{antibiotic['antibiotic']} - {antibiotic['method']}", value=None,key=input_key)
+                                            #read the ast result
+                                            if value is not None:
+                                                user_ast_results[antibiotic['antibiotic']] = {"value": value, "method": antibiotic['method']}
                                             #passing results to the engine
                                            
-                                    if st.button("Submit results:", key="submit ast result"):
-                                        interpreted_results = engine.build_results(organism= organism_input,results=user_ast_results,eucast_date=selected_eucast_date)
-                                        print("Build Results returend:", interpreted_results)
-                                        st.session_state["interpreted_results"] = interpreted_results
+                                        if st.button("Submit results:", key="submit ast result"):
+                                            interpreted_results = engine.build_results(organism= organism_input,results=user_ast_results,eucast_date=selected_eucast_date)
+                                            print("Build Results returend:", interpreted_results)
+                                            st.session_state["interpreted_results"] = interpreted_results
                                         
                                         
                             

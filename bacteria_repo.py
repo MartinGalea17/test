@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-from difflib import get_close_matches
+import difflib
 from collections import defaultdict
 import logging
 logger = logging.getLogger(__name__)
@@ -46,7 +46,18 @@ class BacteriaRepository:
         matches = self.bacteria[self.bacteria["clinical_group"].str.strip().str.lower() == clinical_group]
         return matches
 
-    
+    def get_close_match(self,organism_name, limit=5 , cutoff=0.6):
+
+        species_names = self.get_species_names()
+        normalize_names = {species.lower(): species
+        for species in species_names}
+
+        search_name = organism_name.strip().lower()
+
+        matches = difflib.get_close_matches(search_name,normalize_names.keys(),n=limit,cutoff=cutoff)
+
+        return [normalize_names[match] for match in matches]
+
 
 repo = BacteriaRepository()
 repo.load_bacteria()

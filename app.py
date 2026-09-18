@@ -53,7 +53,7 @@ date_options = sorted(set(repo.eucast_date))
 sample_type_options = sorted(set(repo.sample_types))
 administration_options = sorted(set(repo.administrations))
 
-@st.cache_resource
+@st.cache_resource(show_spinner=False)
 def load_ast_engine():
     engine = ASTEngine()
     engine.load_data()

@@ -43,7 +43,7 @@
             "disk": {
                 "content_ug": "1 unit",
                 "zone_mm": {
-                    "S": ">=12",
+                    "S": "≥12",
                     "R": "<12",
                     "ATU": ""
                 }
@@ -59,14 +59,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=1",
+                "S": "≤1",
                 "R": ">1",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "2",
                 "zone_mm": {
-                    "S": ">=18",
+                    "S": "≥18",
                     "R": "<18",
                     "ATU": ""
                 }
@@ -105,7 +105,7 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=1",
+                "S": "≤1",
                 "R": ">1",
                 "ATU": ""
             },
@@ -128,7 +128,7 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=2",
+                "S": "≤2",
                 "R": ">2",
                 "ATU": ""
             },
@@ -174,7 +174,7 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=0.001",
+                "S": "≤0.001",
                 "R": ">2",
                 "ATU": ""
             },
@@ -197,14 +197,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=2",
+                "S": "≤2",
                 "R": ">2",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "2-1",
                 "zone_mm": {
-                    "S": ">=15",
+                    "S": "≥15",
                     "R": "<15",
                     "ATU": ""
                 }
@@ -220,14 +220,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=0.001",
+                "S": "≤0.001",
                 "R": ">2",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "2-1",
                 "zone_mm": {
-                    "S": ">=50",
+                    "S": "≥50",
                     "R": "<15",
                     "ATU": ""
                 }
@@ -266,14 +266,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=0.25",
+                "S": "≤0.25",
                 "R": ">0.25",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "30-6",
                 "zone_mm": {
-                    "S": ">=27",
+                    "S": "≥27",
                     "R": "<27",
                     "ATU": "26-28"
                 }
@@ -565,14 +565,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=0.25",
+                "S": "≤0.25",
                 "R": ">0.25",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "30",
                 "zone_mm": {
-                    "S": ">=28",
+                    "S": "≥28",
                     "R": "<28",
                     "ATU": "28-33"
                 }
@@ -611,14 +611,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=0.125",
+                "S": "≤0.125",
                 "R": ">0.125",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "5",
                 "zone_mm": {
-                    "S": ">=26",
+                    "S": "≥26",
                     "R": "<26",
                     "ATU": ""
                 }
@@ -634,14 +634,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=0.125",
+                "S": "≤0.125",
                 "R": ">0.125",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "5",
                 "zone_mm": {
-                    "S": ">=27",
+                    "S": "≥27",
                     "R": "<27",
                     "ATU": "25-27"
                 }
@@ -657,14 +657,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=0.125",
+                "S": "≤0.125",
                 "R": ">0.125",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "5",
                 "zone_mm": {
-                    "S": ">=27",
+                    "S": "≥27",
                     "R": "<27",
                     "ATU": "25-27"
                 }
@@ -703,14 +703,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=0.25",
+                "S": "≤0.25",
                 "R": ">0.25",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "10",
                 "zone_mm": {
-                    "S": ">=26",
+                    "S": "≥26",
                     "R": "<26",
                     "ATU": "26-29"
                 }
@@ -726,7 +726,7 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=0.03",
+                "S": "≤0.03",
                 "R": ">0.03",
                 "ATU": ""
             },
@@ -795,14 +795,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=1",
+                "S": "≤1",
                 "R": ">1",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "30",
                 "zone_mm": {
-                    "S": ">=25",
+                    "S": "≥25",
                     "R": "<25",
                     "ATU": ""
                 }
@@ -841,14 +841,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=0.5",
+                "S": "≤0.5",
                 "R": ">0.5",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "30-10",
                 "zone_mm": {
-                    "S": ">=23",
+                    "S": "≥23",
                     "R": "<23",
                     "ATU": "22-23"
                 }
@@ -864,14 +864,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=0.125",
+                "S": "≤0.125",
                 "R": ">0.125",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "30",
                 "zone_mm": {
-                    "S": ">=32",
+                    "S": "≥32",
                     "R": "<32",
                     "ATU": "31-33"
                 }
@@ -887,14 +887,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=0.125",
+                "S": "≤0.125",
                 "R": ">0.125",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "30",
                 "zone_mm": {
-                    "S": ">=32",
+                    "S": "≥32",
                     "R": "<32",
                     "ATU": "31-33"
                 }
@@ -910,14 +910,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=1",
+                "S": "≤1",
                 "R": ">2",
                 "ATU": "2"
             },
             "disk": {
                 "content_ug": "30",
                 "zone_mm": {
-                    "S": ">=27",
+                    "S": "≥27",
                     "R": "<25",
                     "ATU": "25-27"
                 }
@@ -933,14 +933,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=0.001",
+                "S": "≤0.001",
                 "R": ">1",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "30",
                 "zone_mm": {
-                    "S": ">=50",
+                    "S": "≥50",
                     "R": "<27",
                     "ATU": "25-27"
                 }
@@ -956,14 +956,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=1",
+                "S": "≤1",
                 "R": ">1",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "10",
                 "zone_mm": {
-                    "S": ">=23",
+                    "S": "≥23",
                     "R": "<23",
                     "ATU": ""
                 }
@@ -979,14 +979,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=0.5",
+                "S": "≤0.5",
                 "R": ">0.5",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "10",
                 "zone_mm": {
-                    "S": ">=23",
+                    "S": "≥23",
                     "R": "<23",
                     "ATU": ""
                 }
@@ -1002,14 +1002,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=2",
+                "S": "≤2",
                 "R": ">2",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "10",
                 "zone_mm": {
-                    "S": ">=20",
+                    "S": "≥20",
                     "R": "<20",
                     "ATU": "6-19"
                 }
@@ -1048,14 +1048,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=2",
+                "S": "≤2",
                 "R": ">2",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "10",
                 "zone_mm": {
-                    "S": ">=20",
+                    "S": "≥20",
                     "R": "<20",
                     "ATU": ""
                 }
@@ -1071,7 +1071,7 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=0.25",
+                "S": "≤0.25",
                 "R": ">0.25",
                 "ATU": ""
             },
@@ -1140,14 +1140,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=0.06",
+                "S": "≤0.06",
                 "R": ">0.06",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "5",
                 "zone_mm": {
-                    "S": ">=30",
+                    "S": "≥30",
                     "R": "<30",
                     "ATU": ""
                 }
@@ -1163,7 +1163,7 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=0.03",
+                "S": "≤0.03",
                 "R": ">0.03",
                 "ATU": ""
             },
@@ -1209,14 +1209,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=0.06",
+                "S": "≤0.06",
                 "R": ">0.06",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "5",
                 "zone_mm": {
-                    "S": ">=30",
+                    "S": "≥30",
                     "R": "<30",
                     "ATU": ""
                 }
@@ -1232,14 +1232,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=0.125",
+                "S": "≤0.125",
                 "R": ">0.125",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "5",
                 "zone_mm": {
-                    "S": ">=28",
+                    "S": "≥28",
                     "R": "<28",
                     "ATU": ""
                 }
@@ -1262,7 +1262,7 @@
             "disk": {
                 "content_ug": "30",
                 "zone_mm": {
-                    "S": ">=23",
+                    "S": "≥23",
                     "R": "<23",
                     "ATU": ""
                 }
@@ -1301,14 +1301,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=0.06",
+                "S": "≤0.06",
                 "R": ">0.06",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "5",
                 "zone_mm": {
-                    "S": ">=30",
+                    "S": "≥30",
                     "R": "<30",
                     "ATU": ""
                 }
@@ -1669,7 +1669,7 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=1",
+                "S": "≤1",
                 "R": ">1",
                 "ATU": ""
             },
@@ -1715,14 +1715,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=1",
+                "S": "≤1",
                 "R": ">1",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "30",
                 "zone_mm": {
-                    "S": ">=24",
+                    "S": "≥24",
                     "R": "<24",
                     "ATU": ""
                 }
@@ -1738,14 +1738,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=2",
+                "S": "≤2",
                 "R": ">2",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "30",
                 "zone_mm": {
-                    "S": ">=25",
+                    "S": "≥25",
                     "R": "<25",
                     "ATU": ""
                 }
@@ -1830,14 +1830,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=2",
+                "S": "≤2",
                 "R": ">2",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "30",
                 "zone_mm": {
-                    "S": ">=28",
+                    "S": "≥28",
                     "R": "<28",
                     "ATU": ""
                 }
@@ -2060,14 +2060,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=1",
+                "S": "≤1",
                 "R": ">1",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "5",
                 "zone_mm": {
-                    "S": ">=18",
+                    "S": "≥18",
                     "R": "<18",
                     "ATU": ""
                 }
@@ -2129,14 +2129,14 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "<=0.5",
+                "S": "≤0.5",
                 "R": ">1",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "1.25-23.75",
                 "zone_mm": {
-                    "S": ">=23",
+                    "S": "≥23",
                     "R": "<20",
                     "ATU": ""
                 }

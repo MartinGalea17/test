@@ -435,7 +435,7 @@ def show_app():
                                 st.title("Results:")
                                
                         interpreted_results = st.session_state.get("interpreted_results")
-                        interpretation_colors = {"➤ Sensitive": "green", "➤ Intermediate": "yellow", "➤ Resistant": "red", "No breakpoint": "gray"}
+                        interpretation_colors = {"➤ Sensitive": "green", "➤ Intermediate": "orange", "➤ Resistant": "red", "No breakpoint": "gray"}
                         
                         
                         if interpreted_results is not None:

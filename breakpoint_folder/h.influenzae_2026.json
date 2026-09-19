@@ -76,21 +76,21 @@
             "class": "Penicillins",
             "antibiotic": "Ampicillin",
             "sample_type": "meningitis",
-            "administration": "",
+            "administration": "iv",
             "name": "",
             "group": "",
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "IE",
-                "R": "IE",
+                "S": "Note",
+                "R": "Note",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "IE",
-                    "R": "IE",
+                    "S": "Note",
+                    "R": "Note",
                     "ATU": ""
                 }
             }
@@ -151,15 +151,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "IE",
-                "R": "IE",
+                "S": "Note",
+                "R": "Note",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "IE",
-                    "R": "IE",
+                    "S": "Note",
+                    "R": "Note",
                     "ATU": ""
                 }
             }
@@ -580,6 +580,29 @@
         },
         {
             "class": "Cephalosporins",
+            "antibiotic": "Cefepime-enmetazobactam",
+            "sample_type": "",
+            "administration": "",
+            "name": "",
+            "group": "",
+            "exclude_name": "",
+            "exclude_group": "",
+            "MIC": {
+                "S": "Note",
+                "R": "Note",
+                "ATU": ""
+            },
+            "disk": {
+                "content_ug": "",
+                "zone_mm": {
+                    "S": "Note",
+                    "R": "Note",
+                    "ATU": ""
+                }
+            }
+        },
+        {
+            "class": "Cephalosporins",
             "antibiotic": "Cefiderocol",
             "sample_type": "",
             "administration": "",
@@ -627,30 +650,7 @@
         {
             "class": "Cephalosporins",
             "antibiotic": "Cefotaxime",
-            "sample_type": "all indications",
-            "administration": "",
-            "name": "",
-            "group": "",
-            "exclude_name": "",
-            "exclude_group": "",
-            "MIC": {
-                "S": "≤0.125",
-                "R": ">0.125",
-                "ATU": ""
-            },
-            "disk": {
-                "content_ug": "5",
-                "zone_mm": {
-                    "S": "≥27",
-                    "R": "<27",
-                    "ATU": "25-27"
-                }
-            }
-        },
-        {
-            "class": "Cephalosporins",
-            "antibiotic": "Cefotaxime",
-            "sample_type": "meningitis",
+            "sample_type": "",
             "administration": "",
             "name": "",
             "group": "",
@@ -857,30 +857,7 @@
         {
             "class": "Cephalosporins",
             "antibiotic": "Ceftriaxone",
-            "sample_type": "all indications",
-            "administration": "",
-            "name": "",
-            "group": "",
-            "exclude_name": "",
-            "exclude_group": "",
-            "MIC": {
-                "S": "≤0.125",
-                "R": ">0.125",
-                "ATU": ""
-            },
-            "disk": {
-                "content_ug": "30",
-                "zone_mm": {
-                    "S": "≥32",
-                    "R": "<32",
-                    "ATU": "31-33"
-                }
-            }
-        },
-        {
-            "class": "Cephalosporins",
-            "antibiotic": "Ceftriaxone",
-            "sample_type": "meningitis",
+            "sample_type": "",
             "administration": "",
             "name": "",
             "group": "",
@@ -1131,24 +1108,24 @@
             }
         },
         {
-            "class": "Fluoroquinolones",
-            "antibiotic": "Ciprofloxacin",
-            "sample_type": "all indications",
+            "class": "Monobactams",
+            "antibiotic": "Aztreonam-avibactam",
+            "sample_type": "",
             "administration": "",
             "name": "",
             "group": "",
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "≤0.06",
-                "R": ">0.06",
+                "S": "IE",
+                "R": "IE",
                 "ATU": ""
             },
             "disk": {
-                "content_ug": "5",
+                "content_ug": "",
                 "zone_mm": {
-                    "S": "≥30",
-                    "R": "<30",
+                    "S": "IE",
+                    "R": "IE",
                     "ATU": ""
                 }
             }
@@ -1156,7 +1133,7 @@
         {
             "class": "Fluoroquinolones",
             "antibiotic": "Ciprofloxacin",
-            "sample_type": "meningitis",
+            "sample_type": "",
             "administration": "",
             "name": "",
             "group": "",
@@ -1168,10 +1145,10 @@
                 "ATU": ""
             },
             "disk": {
-                "content_ug": "",
+                "content_ug": "5",
                 "zone_mm": {
-                    "S": "Note",
-                    "R": "Note",
+                    "S": "≥32",
+                    "R": "<32",
                     "ATU": ""
                 }
             }
@@ -2130,14 +2107,14 @@
             "exclude_group": "",
             "MIC": {
                 "S": "≤0.5",
-                "R": ">1",
+                "R": ">0.5",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "1.25-23.75",
                 "zone_mm": {
                     "S": "≥23",
-                    "R": "<20",
+                    "R": "<23",
                     "ATU": ""
                 }
             }

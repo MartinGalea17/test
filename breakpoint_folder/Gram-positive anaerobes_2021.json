@@ -1,7 +1,7 @@
 {
     "eucast_version": "2021",
     "organism": "",
-    "clinical_group": "Gram-positive anaerobes",
+    "clinical_group": "Gram positive anaerobes",
     "breakpoints": [
         {
             "class": "Penicillins",

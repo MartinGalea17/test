@@ -1,7 +1,7 @@
 {
     "eucast_version": "2026",
     "organism": "Haemophilus influenzae",
-    "clinical_group": "Haemophilus",
+    "clinical_group": "",
     "breakpoints": [
         {
             "class": "Penicillins",
@@ -18,7 +18,7 @@
                 "ATU": ""
             },
             "disk": {
-                "content_ug": "IE",
+                "content_ug": "",
                 "zone_mm": {
                     "S": "IE",
                     "R": "IE",
@@ -28,8 +28,8 @@
         },
         {
             "class": "Penicillins",
-            "antibiotic": "Benzylpenicillin",
-            "sample_type": "screen only",
+            "antibiotic": "Benzylpenicillin (screen only)",
+            "sample_type": "",
             "administration": "",
             "name": "",
             "group": "",
@@ -43,8 +43,8 @@
             "disk": {
                 "content_ug": "1 unit",
                 "zone_mm": {
-                    "S": "12A,B",
-                    "R": "12A,B",
+                    "S": ">=12",
+                    "R": "<12",
                     "ATU": ""
                 }
             }
@@ -52,22 +52,22 @@
         {
             "class": "Penicillins",
             "antibiotic": "Ampicillin",
-            "sample_type": "indications other than meningitis",
+            "sample_type": "all indications",
             "administration": "",
             "name": "",
             "group": "",
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "1",
-                "R": "1",
+                "S": "<=1",
+                "R": ">1",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "2",
                 "zone_mm": {
-                    "S": "18A,B",
-                    "R": "18A,B",
+                    "S": ">=18",
+                    "R": "<18",
                     "ATU": ""
                 }
             }
@@ -76,21 +76,21 @@
             "class": "Penicillins",
             "antibiotic": "Ampicillin",
             "sample_type": "meningitis",
-            "administration": "iv",
+            "administration": "",
             "name": "",
             "group": "",
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "Note3",
-                "R": "Note3",
+                "S": "IE",
+                "R": "IE",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "NoteC",
-                    "R": "NoteC",
+                    "S": "IE",
+                    "R": "IE",
                     "ATU": ""
                 }
             }
@@ -105,15 +105,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "14,5",
-                "R": "14.5",
+                "S": "<=1",
+                "R": ">1",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "NoteA,D",
-                    "R": "NoteA,D",
+                    "S": "Note",
+                    "R": "Note",
                     "ATU": ""
                 }
             }
@@ -121,22 +121,22 @@
         {
             "class": "Penicillins",
             "antibiotic": "Amoxicillin",
-            "sample_type": "indications other than meningitis",
+            "sample_type": "all indications",
             "administration": "iv",
             "name": "",
             "group": "",
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "2",
-                "R": "2",
+                "S": "<=2",
+                "R": ">2",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "NoteA,E",
-                    "R": "NoteA,E",
+                    "S": "Note",
+                    "R": "Note",
                     "ATU": ""
                 }
             }
@@ -151,15 +151,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "Note3",
-                "R": "Note3",
+                "S": "IE",
+                "R": "IE",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "NoteC",
-                    "R": "NoteC",
+                    "S": "IE",
+                    "R": "IE",
                     "ATU": ""
                 }
             }
@@ -174,15 +174,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "0.001",
-                "R": "2",
+                "S": "<=0.001",
+                "R": ">2",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "NoteA,F",
-                    "R": "NoteA,F",
+                    "S": "Note",
+                    "R": "Note",
                     "ATU": ""
                 }
             }
@@ -197,15 +197,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "26",
-                "R": "26",
+                "S": "<=2",
+                "R": ">2",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "2-1",
                 "zone_mm": {
-                    "S": "15A,B",
-                    "R": "15A,B",
+                    "S": ">=15",
+                    "R": "<15",
                     "ATU": ""
                 }
             }
@@ -220,15 +220,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "0.0016",
-                "R": "26",
+                "S": "<=0.001",
+                "R": ">2",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "2-1",
                 "zone_mm": {
-                    "S": "50A,B",
-                    "R": "15A,B",
+                    "S": ">=50",
+                    "R": "<15",
                     "ATU": ""
                 }
             }
@@ -248,7 +248,7 @@
                 "ATU": ""
             },
             "disk": {
-                "content_ug": "IE",
+                "content_ug": "",
                 "zone_mm": {
                     "S": "IE",
                     "R": "IE",
@@ -266,16 +266,16 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "0.257",
-                "R": "0.257",
+                "S": "<=0.25",
+                "R": ">0.25",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "30-6",
                 "zone_mm": {
-                    "S": "27A,B",
-                    "R": "27A,B",
-                    "ATU": "26-28B,G"
+                    "S": ">=27",
+                    "R": "<27",
+                    "ATU": "26-28"
                 }
             }
         },
@@ -294,7 +294,7 @@
                 "ATU": ""
             },
             "disk": {
-                "content_ug": "IE",
+                "content_ug": "",
                 "zone_mm": {
                     "S": "IE",
                     "R": "IE",
@@ -317,7 +317,7 @@
                 "ATU": ""
             },
             "disk": {
-                "content_ug": "IE",
+                "content_ug": "",
                 "zone_mm": {
                     "S": "IE",
                     "R": "IE",
@@ -340,7 +340,7 @@
                 "ATU": ""
             },
             "disk": {
-                "content_ug": "IE",
+                "content_ug": "",
                 "zone_mm": {
                     "S": "IE",
                     "R": "IE",
@@ -358,15 +358,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -381,15 +381,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -404,15 +404,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -427,38 +427,38 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
         },
         {
             "class": "Penicillins",
-            "antibiotic": "Mecillinam",
-            "sample_type": "uncomplicated UTI only",
+            "antibiotic": "Mecillinam (pivmecillinam)",
+            "sample_type": "uncomplicated UTI",
             "administration": "oral",
             "name": "",
             "group": "",
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -473,15 +473,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -496,15 +496,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -519,15 +519,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -542,15 +542,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -565,39 +565,16 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "0.25",
-                "R": "0.25",
+                "S": "<=0.25",
+                "R": ">0.25",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "30",
                 "zone_mm": {
-                    "S": "28A,B",
-                    "R": "28A,B",
-                    "ATU": "28-33B,C"
-                }
-            }
-        },
-        {
-            "class": "Cephalosporins",
-            "antibiotic": "Cefepime-enmetazobactam",
-            "sample_type": "",
-            "administration": "",
-            "name": "",
-            "group": "",
-            "exclude_name": "",
-            "exclude_group": "",
-            "MIC": {
-                "S": "Note2",
-                "R": "Note2",
-                "ATU": ""
-            },
-            "disk": {
-                "content_ug": "",
-                "zone_mm": {
-                    "S": "NoteD",
-                    "R": "NoteD",
-                    "ATU": ""
+                    "S": ">=28",
+                    "R": "<28",
+                    "ATU": "28-33"
                 }
             }
         },
@@ -616,7 +593,7 @@
                 "ATU": ""
             },
             "disk": {
-                "content_ug": "IE",
+                "content_ug": "",
                 "zone_mm": {
                     "S": "IE",
                     "R": "IE",
@@ -634,15 +611,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "0.125",
-                "R": "0.125",
+                "S": "<=0.125",
+                "R": ">0.125",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "5",
                 "zone_mm": {
-                    "S": "26A,B",
-                    "R": "26A,B",
+                    "S": ">=26",
+                    "R": "<26",
                     "ATU": ""
                 }
             }
@@ -650,23 +627,46 @@
         {
             "class": "Cephalosporins",
             "antibiotic": "Cefotaxime",
-            "sample_type": "",
+            "sample_type": "all indications",
             "administration": "",
             "name": "",
             "group": "",
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "0.125",
-                "R": "0.125",
+                "S": "<=0.125",
+                "R": ">0.125",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "5",
                 "zone_mm": {
-                    "S": "27A,B",
-                    "R": "27A,B",
-                    "ATU": "25-27B,C"
+                    "S": ">=27",
+                    "R": "<27",
+                    "ATU": "25-27"
+                }
+            }
+        },
+        {
+            "class": "Cephalosporins",
+            "antibiotic": "Cefotaxime",
+            "sample_type": "meningitis",
+            "administration": "",
+            "name": "",
+            "group": "",
+            "exclude_name": "",
+            "exclude_group": "",
+            "MIC": {
+                "S": "<=0.125",
+                "R": ">0.125",
+                "ATU": ""
+            },
+            "disk": {
+                "content_ug": "5",
+                "zone_mm": {
+                    "S": ">=27",
+                    "R": "<27",
+                    "ATU": "25-27"
                 }
             }
         },
@@ -685,7 +685,7 @@
                 "ATU": ""
             },
             "disk": {
-                "content_ug": "IE",
+                "content_ug": "",
                 "zone_mm": {
                     "S": "IE",
                     "R": "IE",
@@ -703,16 +703,16 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "0.25",
-                "R": "0.25",
+                "S": "<=0.25",
+                "R": ">0.25",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "10",
                 "zone_mm": {
-                    "S": "26A,B",
-                    "R": "26A,B",
-                    "ATU": "26-29B,C"
+                    "S": ">=26",
+                    "R": "<26",
+                    "ATU": "26-29"
                 }
             }
         },
@@ -726,15 +726,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "0.03",
-                "R": "0.03",
+                "S": "<=0.03",
+                "R": ">0.03",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "NoteA",
-                    "R": "NoteA",
+                    "S": "Note",
+                    "R": "Note",
                     "ATU": ""
                 }
             }
@@ -749,15 +749,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -772,15 +772,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -795,15 +795,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "1",
-                "R": "1",
+                "S": "<=1",
+                "R": ">1",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "30",
                 "zone_mm": {
-                    "S": "25A,B",
-                    "R": "25A,B",
+                    "S": ">=25",
+                    "R": "<25",
                     "ATU": ""
                 }
             }
@@ -823,7 +823,7 @@
                 "ATU": ""
             },
             "disk": {
-                "content_ug": "IE",
+                "content_ug": "",
                 "zone_mm": {
                     "S": "IE",
                     "R": "IE",
@@ -841,39 +841,62 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "0.5",
-                "R": "0.5",
+                "S": "<=0.5",
+                "R": ">0.5",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "30-10",
                 "zone_mm": {
-                    "S": "23A,B",
-                    "R": "23A,B",
-                    "ATU": "22-23B,C"
+                    "S": ">=23",
+                    "R": "<23",
+                    "ATU": "22-23"
                 }
             }
         },
         {
             "class": "Cephalosporins",
             "antibiotic": "Ceftriaxone",
-            "sample_type": "",
+            "sample_type": "all indications",
             "administration": "",
             "name": "",
             "group": "",
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "0.125",
-                "R": "0.125",
+                "S": "<=0.125",
+                "R": ">0.125",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "30",
                 "zone_mm": {
-                    "S": "32A,B",
-                    "R": "32A,B",
-                    "ATU": "31-33B,C"
+                    "S": ">=32",
+                    "R": "<32",
+                    "ATU": "31-33"
+                }
+            }
+        },
+        {
+            "class": "Cephalosporins",
+            "antibiotic": "Ceftriaxone",
+            "sample_type": "meningitis",
+            "administration": "",
+            "name": "",
+            "group": "",
+            "exclude_name": "",
+            "exclude_group": "",
+            "MIC": {
+                "S": "<=0.125",
+                "R": ">0.125",
+                "ATU": ""
+            },
+            "disk": {
+                "content_ug": "30",
+                "zone_mm": {
+                    "S": ">=32",
+                    "R": "<32",
+                    "ATU": "31-33"
                 }
             }
         },
@@ -887,16 +910,16 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "1",
-                "R": "2",
-                "ATU": "24"
+                "S": "<=1",
+                "R": ">2",
+                "ATU": "2"
             },
             "disk": {
                 "content_ug": "30",
                 "zone_mm": {
-                    "S": "27A,B",
-                    "R": "25A,B",
-                    "ATU": "25-27B,C"
+                    "S": ">=27",
+                    "R": "<25",
+                    "ATU": "25-27"
                 }
             }
         },
@@ -910,16 +933,16 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "0.001",
-                "R": "1",
+                "S": "<=0.001",
+                "R": ">1",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "30",
                 "zone_mm": {
-                    "S": "50A,B",
-                    "R": "27A,B",
-                    "ATU": "25-27B,C"
+                    "S": ">=50",
+                    "R": "<27",
+                    "ATU": "25-27"
                 }
             }
         },
@@ -933,15 +956,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "1",
-                "R": "1",
+                "S": "<=1",
+                "R": ">1",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "10",
                 "zone_mm": {
-                    "S": "23A,B",
-                    "R": "23A,B",
+                    "S": ">=23",
+                    "R": "<23",
                     "ATU": ""
                 }
             }
@@ -956,15 +979,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "0.5",
-                "R": "0.5",
+                "S": "<=0.5",
+                "R": ">0.5",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "10",
                 "zone_mm": {
-                    "S": "23A,B",
-                    "R": "23A,B",
+                    "S": ">=23",
+                    "R": "<23",
                     "ATU": ""
                 }
             }
@@ -979,16 +1002,16 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "2",
-                "R": "2",
+                "S": "<=2",
+                "R": ">2",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "10",
                 "zone_mm": {
-                    "S": "20A,B",
-                    "R": "20A,B",
-                    "ATU": "6-19B,C"
+                    "S": ">=20",
+                    "R": "<20",
+                    "ATU": "6-19"
                 }
             }
         },
@@ -1002,15 +1025,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "Note3",
-                "R": "Note3",
+                "S": "Note",
+                "R": "Note",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "NoteE",
-                    "R": "NoteE",
+                    "S": "Note",
+                    "R": "Note",
                     "ATU": ""
                 }
             }
@@ -1018,22 +1041,22 @@
         {
             "class": "Carbapenems",
             "antibiotic": "Meropenem",
-            "sample_type": "indications other than meningitis",
+            "sample_type": "all indications",
             "administration": "",
             "name": "",
             "group": "",
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "2",
-                "R": "2",
+                "S": "<=2",
+                "R": ">2",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "10",
                 "zone_mm": {
-                    "S": "20A,B",
-                    "R": "20A,B",
+                    "S": ">=20",
+                    "R": "<20",
                     "ATU": ""
                 }
             }
@@ -1048,15 +1071,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "0.25",
-                "R": "0.25",
+                "S": "<=0.25",
+                "R": ">0.25",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "NoteA,D",
-                    "R": "NoteA,D",
+                    "S": "Note",
+                    "R": "Note",
                     "ATU": ""
                 }
             }
@@ -1071,15 +1094,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "Note3",
-                "R": "Note3",
+                "S": "Note",
+                "R": "Note",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "NoteE",
-                    "R": "NoteE",
+                    "S": "Note",
+                    "R": "Note",
                     "ATU": ""
                 }
             }
@@ -1099,30 +1122,7 @@
                 "ATU": ""
             },
             "disk": {
-                "content_ug": "IE",
-                "zone_mm": {
-                    "S": "IE",
-                    "R": "IE",
-                    "ATU": ""
-                }
-            }
-        },
-        {
-            "class": "Monobactams",
-            "antibiotic": "Aztreonam-avibactam",
-            "sample_type": "",
-            "administration": "",
-            "name": "",
-            "group": "",
-            "exclude_name": "",
-            "exclude_group": "",
-            "MIC": {
-                "S": "IE",
-                "R": "IE",
-                "ATU": ""
-            },
-            "disk": {
-                "content_ug": "IE",
+                "content_ug": "",
                 "zone_mm": {
                     "S": "IE",
                     "R": "IE",
@@ -1133,22 +1133,45 @@
         {
             "class": "Fluoroquinolones",
             "antibiotic": "Ciprofloxacin",
-            "sample_type": "",
+            "sample_type": "all indications",
             "administration": "",
             "name": "",
             "group": "",
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "0.03",
-                "R": "0.03",
+                "S": "<=0.06",
+                "R": ">0.06",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "5",
                 "zone_mm": {
-                    "S": "32A",
-                    "R": "32A",
+                    "S": ">=30",
+                    "R": "<30",
+                    "ATU": ""
+                }
+            }
+        },
+        {
+            "class": "Fluoroquinolones",
+            "antibiotic": "Ciprofloxacin",
+            "sample_type": "meningitis",
+            "administration": "",
+            "name": "",
+            "group": "",
+            "exclude_name": "",
+            "exclude_group": "",
+            "MIC": {
+                "S": "<=0.03",
+                "R": ">0.03",
+                "ATU": ""
+            },
+            "disk": {
+                "content_ug": "",
+                "zone_mm": {
+                    "S": "Note",
+                    "R": "Note",
                     "ATU": ""
                 }
             }
@@ -1168,7 +1191,7 @@
                 "ATU": ""
             },
             "disk": {
-                "content_ug": "IE",
+                "content_ug": "",
                 "zone_mm": {
                     "S": "IE",
                     "R": "IE",
@@ -1186,15 +1209,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "0.06",
-                "R": "0.06",
+                "S": "<=0.06",
+                "R": ">0.06",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "5",
                 "zone_mm": {
-                    "S": "30A",
-                    "R": "30A",
+                    "S": ">=30",
+                    "R": "<30",
                     "ATU": ""
                 }
             }
@@ -1209,23 +1232,23 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "0.125",
-                "R": "0.125",
+                "S": "<=0.125",
+                "R": ">0.125",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "5",
                 "zone_mm": {
-                    "S": "28A",
-                    "R": "28A",
+                    "S": ">=28",
+                    "R": "<28",
                     "ATU": ""
                 }
             }
         },
         {
             "class": "Fluoroquinolones",
-            "antibiotic": "Nalidixic acid",
-            "sample_type": "screen only",
+            "antibiotic": "Nalidixic acid (screen only)",
+            "sample_type": "",
             "administration": "",
             "name": "",
             "group": "",
@@ -1239,8 +1262,8 @@
             "disk": {
                 "content_ug": "30",
                 "zone_mm": {
-                    "S": "23B",
-                    "R": "23B",
+                    "S": ">=23",
+                    "R": "<23",
                     "ATU": ""
                 }
             }
@@ -1248,22 +1271,22 @@
         {
             "class": "Fluoroquinolones",
             "antibiotic": "Norfloxacin",
-            "sample_type": "uncomplicated UTI only",
+            "sample_type": "uncomplicated UTI",
             "administration": "",
             "name": "",
             "group": "",
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -1278,15 +1301,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "0.06",
-                "R": "0.06",
+                "S": "<=0.06",
+                "R": ">0.06",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "5",
                 "zone_mm": {
-                    "S": "30A",
-                    "R": "30A",
+                    "S": ">=30",
+                    "R": "<30",
                     "ATU": ""
                 }
             }
@@ -1306,7 +1329,7 @@
                 "ATU": ""
             },
             "disk": {
-                "content_ug": "IE",
+                "content_ug": "",
                 "zone_mm": {
                     "S": "IE",
                     "R": "IE",
@@ -1329,7 +1352,7 @@
                 "ATU": ""
             },
             "disk": {
-                "content_ug": "IE",
+                "content_ug": "",
                 "zone_mm": {
                     "S": "IE",
                     "R": "IE",
@@ -1352,7 +1375,7 @@
                 "ATU": ""
             },
             "disk": {
-                "content_ug": "IE",
+                "content_ug": "",
                 "zone_mm": {
                     "S": "IE",
                     "R": "IE",
@@ -1375,7 +1398,7 @@
                 "ATU": ""
             },
             "disk": {
-                "content_ug": "IE",
+                "content_ug": "",
                 "zone_mm": {
                     "S": "IE",
                     "R": "IE",
@@ -1393,15 +1416,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -1416,15 +1439,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -1439,15 +1462,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -1462,15 +1485,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -1485,15 +1508,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -1508,15 +1531,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "Note1",
-                "R": "Note1",
+                "S": "Note",
+                "R": "Note",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "NoteA",
-                    "R": "NoteA",
+                    "S": "Note",
+                    "R": "Note",
                     "ATU": ""
                 }
             }
@@ -1531,15 +1554,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "Note1",
-                "R": "Note1",
+                "S": "Note",
+                "R": "Note",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "NoteA",
-                    "R": "NoteA",
+                    "S": "Note",
+                    "R": "Note",
                     "ATU": ""
                 }
             }
@@ -1554,15 +1577,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "Note1",
-                "R": "Note1",
+                "S": "Note",
+                "R": "Note",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "NoteA",
-                    "R": "NoteA",
+                    "S": "Note",
+                    "R": "Note",
                     "ATU": ""
                 }
             }
@@ -1577,15 +1600,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "Note1",
-                "R": "Note1",
+                "S": "Note",
+                "R": "Note",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "NoteA",
-                    "R": "NoteA",
+                    "S": "Note",
+                    "R": "Note",
                     "ATU": ""
                 }
             }
@@ -1600,15 +1623,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -1623,15 +1646,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -1646,15 +1669,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "11",
-                "R": "11",
+                "S": "<=1",
+                "R": ">1",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "NoteA",
-                    "R": "NoteA",
+                    "S": "Note",
+                    "R": "Note",
                     "ATU": ""
                 }
             }
@@ -1674,7 +1697,7 @@
                 "ATU": ""
             },
             "disk": {
-                "content_ug": "IE",
+                "content_ug": "",
                 "zone_mm": {
                     "S": "IE",
                     "R": "IE",
@@ -1692,15 +1715,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "11",
-                "R": "11",
+                "S": "<=1",
+                "R": ">1",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "30",
                 "zone_mm": {
-                    "S": "24A",
-                    "R": "24A",
+                    "S": ">=24",
+                    "R": "<24",
                     "ATU": ""
                 }
             }
@@ -1715,15 +1738,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "21",
-                "R": "21",
+                "S": "<=2",
+                "R": ">2",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "30",
                 "zone_mm": {
-                    "S": "25A",
-                    "R": "25A",
+                    "S": ">=25",
+                    "R": "<25",
                     "ATU": ""
                 }
             }
@@ -1743,7 +1766,7 @@
                 "ATU": ""
             },
             "disk": {
-                "content_ug": "IE",
+                "content_ug": "",
                 "zone_mm": {
                     "S": "IE",
                     "R": "IE",
@@ -1761,15 +1784,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -1784,15 +1807,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -1807,15 +1830,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "2",
-                "R": "2",
+                "S": "<=2",
+                "R": ">2",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "30",
                 "zone_mm": {
-                    "S": "28",
-                    "R": "28",
+                    "S": ">=28",
+                    "R": "<28",
                     "ATU": ""
                 }
             }
@@ -1830,15 +1853,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -1853,15 +1876,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -1881,7 +1904,7 @@
                 "ATU": ""
             },
             "disk": {
-                "content_ug": "IE",
+                "content_ug": "",
                 "zone_mm": {
                     "S": "IE",
                     "R": "IE",
@@ -1899,15 +1922,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -1922,15 +1945,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -1950,7 +1973,7 @@
                 "ATU": ""
             },
             "disk": {
-                "content_ug": "IE",
+                "content_ug": "",
                 "zone_mm": {
                     "S": "IE",
                     "R": "IE",
@@ -1968,15 +1991,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -1984,22 +2007,22 @@
         {
             "class": "Miscellaneous agents",
             "antibiotic": "Nitrofurantoin",
-            "sample_type": "uncomplicated UTI only",
+            "sample_type": "uncomplicated UTI",
             "administration": "",
             "name": "",
             "group": "",
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -2007,45 +2030,45 @@
         {
             "class": "Miscellaneous agents",
             "antibiotic": "Nitroxoline",
-            "sample_type": "uncomplicated UTI only",
+            "sample_type": "uncomplicated UTI",
             "administration": "",
             "name": "",
             "group": "",
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
         },
         {
             "class": "Miscellaneous agents",
-            "antibiotic": "Rifampicin",
-            "sample_type": "for prophylaxis only",
+            "antibiotic": "Rifampicin (for prophylaxis only)",
+            "sample_type": "",
             "administration": "",
             "name": "",
             "group": "",
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "1",
-                "R": "1",
+                "S": "<=1",
+                "R": ">1",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "5",
                 "zone_mm": {
-                    "S": "18",
-                    "R": "18",
+                    "S": ">=18",
+                    "R": "<18",
                     "ATU": ""
                 }
             }
@@ -2060,15 +2083,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -2076,22 +2099,22 @@
         {
             "class": "Miscellaneous agents",
             "antibiotic": "Trimethoprim",
-            "sample_type": "uncomplicated UTI only",
+            "sample_type": "uncomplicated UTI",
             "administration": "",
             "name": "",
             "group": "",
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "",
-                "R": "",
+                "S": "-",
+                "R": "-",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "",
                 "zone_mm": {
-                    "S": "",
-                    "R": "",
+                    "S": "-",
+                    "R": "-",
                     "ATU": ""
                 }
             }
@@ -2106,15 +2129,15 @@
             "exclude_name": "",
             "exclude_group": "",
             "MIC": {
-                "S": "0.5",
-                "R": "0.5",
+                "S": "<=0.5",
+                "R": ">1",
                 "ATU": ""
             },
             "disk": {
                 "content_ug": "1.25-23.75",
                 "zone_mm": {
-                    "S": "23",
-                    "R": "23",
+                    "S": ">=23",
+                    "R": "<20",
                     "ATU": ""
                 }
             }
